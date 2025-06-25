@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr & Mrs Mingle</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f5;
+      color: #222;
+    }
+    header {
+      background-color: #7b0038;
+      color: white;
+      padding: 2rem 1rem;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-style: italic;
+    }
+    .menu-button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: white;
+      color: #7b0038;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .menu {
+      display: none;
+      position: absolute;
+      top: 4rem;
+      right: 1rem;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+    .menu a {
+      display: block;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      color: #7b0038;
+    }
+    .menu a:hover {
+      background-color: #f0e0e7;
+    }
+    .section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section h2 {
+      color: #7b0038;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .design {
+      background-color: white;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .design img {
+      width: 100%;
+      border-radius: 4px;
+    }
+    .design h3 {
+      margin-top: 0.5rem;
+      color: #333;
+    }
+    .design p {
+      font-size: 0.9rem;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    footer a {
+      color: #ffcc70;
+      text-decoration: none;
+    }
+    /* StyleSpeak Button */
+    .stylespeak-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #7b0038;
+      color: white;
+      border: none;
+      padding: 1rem 1.2rem;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      cursor: pointer;
+      z-index: 100;
+    }
+    .stylespeak-popup {
+      display: none;
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      width: 280px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      padding: 1rem;
+      z-index: 101;
+    }
+    .stylespeak-popup h4 {
+      margin-top: 0;
+      color: #7b0038;
+    }
+    .stylespeak-popup button {
+      background: #7b0038;
+      color: white;
+      border: none;
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+    function toggleStyleSpeak() {
+      const popup = document.getElementById('stylespeak');
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Mr & Mrs Mingle</h1>
+    <p>Digital African Fashion Designs for Sale</p>
+    <button class="menu-button" onclick="toggleMenu()">Menu</button>
+    <div class="menu" id="dropdownMenu">
+      <a href="#designs">Designs</a>
+      <a href="#order">How to Order</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <section class="section" id="designs">
+    <h2>Our Signature Designs</h2>
+    <div class="gallery">
+      <div class="design">
+        <img src="https://via.placeholder.com/300x400?text=Design+Sketch+1" alt="Signature Fusion Pencil">
+        <h3>The Signature Fusion Pencil</h3>
+        <p>A sleek, structured office dress with a bold fuchsia base and curved front zipper. Accented with a sweeping kente panel across the bodice.</p>
+        <strong>Price: GHS 60</strong>
+      </div>
+      <div class="design">
+        <img src="https://via.placeholder.com/300x400?text=Design+Sketch+2" alt="Heritage Flare Classic">
+        <h3>The Heritage Flare Classic</h3>
+        <p>A graceful fit-and-flare silhouette with gold zip and diagonal kente wrap. Tradition meets elegance in motion.</p>
+        <strong>Price: GHS 55</strong>
+      </div>
+      <div class="design">
+        <img src="https://via.placeholder.com/300x400?text=Design+Sketch+3" alt="Power Zip Fusion">
+        <h3>The Power Zip Fusion</h3>
+        <p>Flared midi skirt with bold center zip and striking kente detailing. A powerful presence for cultural showcases.</p>
+        <strong>Price: GHS 70</strong>
+      </div>
+      <div class="design">
+        <img src="https://via.placeholder.com/300x400?text=Design+Sketch+4" alt="Urban Chic BodyContour">
+        <h3>The Urban Chic BodyContour</h3>
+        <p>Body-hugging, short hemline dress with front zip and bold kente sweep. Youthful and confident.</p>
+        <strong>Price: GHS 50</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="order">
+    <h2>How to Order</h2>
+    <p>1. Choose your favorite design above.<br>
+       2. Make payment via mobile money to:<br>
+       <strong>Edward Mingle – Telecel: 0208123398</strong><br>
+       (We accept MTN, Telecel, AirtelTigo)<br>
+       3. Email your name, payment proof, and design title to: <strong>orders@mrandmrsmingle.com</strong></p>
+  </section>
+
+  <footer id="contact">
+    <p>© 2025 Mr & Mrs Mingle. All Rights Reserved.<br>
+    Follow us on Instagram | Contact us at: <a href="mailto:orders@mrandmrsmingle.com">orders@mrandmrsmingle.com</a></p>
+  </footer>
+
+  <!-- StyleSpeak Button + Popup -->
+  <button class="stylespeak-btn" onclick="toggleStyleSpeak()">💬</button>
+  <div class="stylespeak-popup" id="stylespeak">
+    <button onclick="toggleStyleSpeak()">✖</button>
+    <h4>StyleSpeak: Your Fashion Companion</h4>
+    <p><strong>Signature Fusion Pencil:</strong> Pair with nude heels and gold accessories for a boardroom-ready look.<br><br>
+       <strong>Heritage Flare Classic:</strong> Perfect with flat sandals or heels. Add bold earrings for an event vibe.<br><br>
+       <strong>Power Zip Fusion:</strong> Try ankle boots and a cropped jacket for modern African chic.<br><br>
+       <strong>Urban Chic BodyContour:</strong> Go minimal with makeup and pair with chunky bracelets or layered beads.
+    </p>
+  </div>
+</body>
+</html>
